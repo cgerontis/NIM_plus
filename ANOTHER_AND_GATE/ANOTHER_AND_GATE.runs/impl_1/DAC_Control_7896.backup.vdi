@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Thu Apr 18 15:48:25 2019
+# Process ID: 11964
+# Log file: C:/Zynq_Book/ANOTHER_AND_GATE/ANOTHER_AND_GATE.runs/impl_1/DAC_Control.vdi
+# Journal file: C:/Zynq_Book/ANOTHER_AND_GATE/ANOTHER_AND_GATE.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source DAC_Control.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.2
+Loading clock regions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/zynq/zynq/xc7z020/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/zynq/zynq/xc7z020/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2014.2/data/parts/xilinx/zynq/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/zynq/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/zynq/zynq/xc7z020/clg484/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2014.2/data\./parts/xilinx/zynq/IOStandards.xml
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+Parsing XDC File [C:/Zynq_Book/ANOTHER_AND_GATE/ANOTHER_AND_GATE.srcs/constrs_1/imports/Zynq_Book/zedboard_master.xdc]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 33]]'. [C:/Zynq_Book/ANOTHER_AND_GATE/ANOTHER_AND_GATE.srcs/constrs_1/imports/Zynq_Book/zedboard_master.xdc:365]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Zynq_Book/ANOTHER_AND_GATE/ANOTHER_AND_GATE.srcs/constrs_1/imports/Zynq_Book/zedboard_master.xdc:365]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 34]]'. [C:/Zynq_Book/ANOTHER_AND_GATE/ANOTHER_AND_GATE.srcs/constrs_1/imports/Zynq_Book/zedboard_master.xdc:368]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Zynq_Book/ANOTHER_AND_GATE/ANOTHER_AND_GATE.srcs/constrs_1/imports/Zynq_Book/zedboard_master.xdc:368]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 35]]'. [C:/Zynq_Book/ANOTHER_AND_GATE/ANOTHER_AND_GATE.srcs/constrs_1/imports/Zynq_Book/zedboard_master.xdc:373]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Zynq_Book/ANOTHER_AND_GATE/ANOTHER_AND_GATE.srcs/constrs_1/imports/Zynq_Book/zedboard_master.xdc:373]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 13]]'. [C:/Zynq_Book/ANOTHER_AND_GATE/ANOTHER_AND_GATE.srcs/constrs_1/imports/Zynq_Book/zedboard_master.xdc:378]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Zynq_Book/ANOTHER_AND_GATE/ANOTHER_AND_GATE.srcs/constrs_1/imports/Zynq_Book/zedboard_master.xdc:378]
+Finished Parsing XDC File [C:/Zynq_Book/ANOTHER_AND_GATE/ANOTHER_AND_GATE.srcs/constrs_1/imports/Zynq_Book/zedboard_master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 453.016 ; gain = 270.348
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 454.742 ; gain = 1.727

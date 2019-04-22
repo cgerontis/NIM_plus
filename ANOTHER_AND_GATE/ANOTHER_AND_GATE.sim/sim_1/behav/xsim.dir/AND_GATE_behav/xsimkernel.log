@@ -1,0 +1,3 @@
+Running: xsim.dir/AND_GATE_behav/xsimk.exe -simmode gui -wdb AND_GATE_behav.wdb -simrunnum 1 -socket 49414
+Design successfully loaded
+Design Loading CPU Usage: 312 ms

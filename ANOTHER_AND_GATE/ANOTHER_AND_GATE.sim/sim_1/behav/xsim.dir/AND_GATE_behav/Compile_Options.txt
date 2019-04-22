@@ -1,0 +1,1 @@
+--debug "typical" --relax -L "xil_defaultlib" -L "secureip" --snapshot "AND_GATE_behav" --prj "C:/Zynq_Book/ANOTHER_AND_GATE/ANOTHER_AND_GATE.sim/sim_1/behav/AND_GATE.prj" "xil_defaultlib.AND_GATE" 
