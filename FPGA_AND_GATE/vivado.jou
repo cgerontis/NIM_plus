@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Thu Apr 04 16:17:12 2019
+# Process ID: 4796
+# Log file: C:/Zynq_Book/FPGA_AND_GATE/vivado.log
+# Journal file: C:/Zynq_Book/FPGA_AND_GATE\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:\Zynq_Book\FPGA_AND_GATE\FPGA_AND_GATE.xpr}
+update_compile_order -fileset sources_1
