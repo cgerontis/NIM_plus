@@ -120,3 +120,19 @@ if {$rc} {
   end_step route_design
 }
 
+start_step write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  write_bitstream -force AND_GATE.bit 
+  if { [file exists C:/Zynq_Book/FPGA_AND_GATE/FPGA_AND_GATE.runs/synth_1/AND_GATE.hwdef] } {
+    catch { write_sysdef -hwdef C:/Zynq_Book/FPGA_AND_GATE/FPGA_AND_GATE.runs/synth_1/AND_GATE.hwdef -bitfile AND_GATE.bit -meminfo AND_GATE_bd.bmm -file AND_GATE.sysdef }
+  }
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
+}
+

@@ -52,54 +52,150 @@ use IEEE.STD_LOGIC_1164.ALL;
 -- signal led AND (coincidence)
 entity AND_GATE is
    Port (  
+           sigout1 : out STD_LOGIC;
+           sigout2 : out STD_LOGIC;
            GCLK  : in STD_LOGIC;
            JC1_P : out STD_LOGIC;
+           JC1_N : out STD_LOGIC;
            JC2_P : out STD_LOGIC;
-           FMC_LA18_CC_P: out STD_LOGIC );
+           JC2_N : out STD_LOGIC;
+           FMC_LA17_CC_P: out STD_LOGIC;
+           FMC_LA18_CC_P: out STD_LOGIC;
+           FMC_LA18_CC_N: out STD_LOGIC );
 end AND_GATE;
 
 architecture Behavioral of AND_GATE is
 
 signal count: integer:=1;
 signal state: integer:=0;
-signal tmp: STD_LOGIC := '0';
+signal clk: STD_LOGIC := '0';
 
 begin
-    process (GCLK,tmp) begin
+    process (GCLK,clk) begin
         if (GCLK' event and GCLK = '1') then
             count <= count + 1;
-        if(count = 20) then
-            tmp <= NOT tmp;
+        if(count = 1000) then
+            clk <= NOT clk;
             count <= 1;
         end if;
         end if;
-        JC2_P <= tmp;
-        FMC_LA18_CC_P <= tmp;
+        JC2_P <= clk;
+        FMC_LA18_CC_P <= clk;
     end process;
     
-dac_proc: process(tmp)
+dac_proc: process(clk)
         begin
             case state is
                 when 0 =>
-                    if wr_blk_p = '0' then
-                        NextState_Sreg0 <= S1;
-                        wr_blk_p <= '1';
-                        wr_dac_p <= '0';
-                    elsif wr_blk_p = '1' then
-                        NextState_Sreg0 <= S1;
-                        wr_blk_p <= '0';
-                    end if;
-                when S3 =>
-                    NextState_Sreg0 <= S4;
-                    next_bit_ptr <= bit_ptr - 1;
-                    next_FMC_LA18_CC_P <= '0';
-                when S1 =>
+                    sigout1 <= '0';
+                    sigout2 <= '0';
+                    FMC_LA17_CC_P <= '0';
+                    FMC_LA18_CC_N <= '0';
+                when 1 =>
+                    sigout1 <= '0';
+                    sigout2 <= '1';
+                    FMC_LA17_CC_P <= '0';
+                    FMC_LA18_CC_N <= '1';
+                when 2 =>
+                    sigout1 <= '0';
+                    sigout2 <= '0';
+                    FMC_LA17_CC_P <= '0';
+                    FMC_LA18_CC_N <= '0';
+                when 3 =>
+                   sigout1 <= '0';
+                   sigout2 <= '0';
+                   FMC_LA17_CC_P <= '0';
+                   FMC_LA18_CC_N <= '0';
+                when 4 =>
+                   sigout1 <= '1';
+                   sigout2 <= '0';
+                   FMC_LA17_CC_P <= '1';
+                   FMC_LA18_CC_N <= '0';
+                when 5 =>
+                   sigout1 <= '0';
+                   sigout2 <= '0';
+                   FMC_LA17_CC_P <= '0';
+                   FMC_LA18_CC_N <= '0';
+                when 6 =>--DATA BIT 15
+                   sigout1 <= '1';
+                   sigout2 <= '0';
+                   FMC_LA17_CC_P <= '1';
+                   FMC_LA18_CC_N <= '0';
+                when 7 =>
+                   sigout1 <= '1';
+                   sigout2 <= '0';
+                   FMC_LA17_CC_P <= '1';
+                   FMC_LA18_CC_N <= '0';
+                when 8 =>
+                   sigout1 <= '0';
+                   sigout2 <= '0';
+                   FMC_LA17_CC_P <= '0';
+                   FMC_LA18_CC_N <= '0';
+                when 9 =>
+                   sigout1 <= '0';
+                   sigout2 <= '0';
+                   FMC_LA17_CC_P <= '0';
+                   FMC_LA18_CC_N <= '0';
+                when 10 =>
+                   sigout1 <= '0';
+                   sigout2 <= '0';
+                   FMC_LA17_CC_P <= '0';
+                   FMC_LA18_CC_N <= '0';
+                when 11 =>
+                   sigout1 <= '0';
+                   sigout2 <= '0';
+                   FMC_LA17_CC_P <= '0';
+                   FMC_LA18_CC_N <= '0';
+                when 12 =>
+                   sigout1 <= '0';
+                   sigout2 <= '0';
+                   FMC_LA17_CC_P <= '0';
+                   FMC_LA18_CC_N <= '0';
+                when 13 =>
+                   sigout1 <= '0';
+                   sigout2 <= '0';
+                   FMC_LA17_CC_P <= '0';
+                   FMC_LA18_CC_N <= '0';
+                when 14 =>
+                   sigout1 <= '0';
+                   sigout2 <= '0';
+                   FMC_LA17_CC_P <= '0';
+                   FMC_LA18_CC_N <= '0';
+                when 15 =>
+                   sigout1 <= '0';
+                   sigout2 <= '0';
+                   FMC_LA17_CC_P <= '0';
+                   FMC_LA18_CC_N <= '0';
+                when 16 =>
+                   sigout1 <= '0';
+                   sigout2 <= '0';
+                   FMC_LA17_CC_P <= '0';
+                   FMC_LA18_CC_N <= '0';
+                when 17 =>
+                   sigout1 <= '0';
+                   sigout2 <= '0';
+                   FMC_LA17_CC_P <= '0';
+                   FMC_LA18_CC_N <= '0';
+                when others =>
+                   sigout1 <= '0';
+                   sigout2 <= '1';   
+                   FMC_LA17_CC_P <= '0';
+                   FMC_LA18_CC_N <= '1';
+            end case;
+            
         end process;
         
-Sreg0_CurrentState: process (tmp)
+    process (clk)
         begin
-            if tmp'event and tmp = '1' then
-                state <= state + 1; 
+            if clk' event and clk = '1' then
+                if state < 17 then
+                    state <= state + 1;
+                end if; 
+            if state = 17 then
+                state <= 0;
             end if;
+            end if;
+            --FMC_LA17_CC_P <= sigout 1;
+            --FMC_LA18_CC_N <= sigout 2;
         end process;
 end Behavioral;

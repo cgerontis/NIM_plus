@@ -95,8 +95,8 @@ set_property PACKAGE_PIN Y9 [get_ports {GCLK}];  # "GCLK"
 #set_property PACKAGE_PIN AB10 [get_ports {JA8}];  # "JA8"
 #set_property PACKAGE_PIN AB9  [get_ports {JA9}];  # "JA9"
 
-#set_property -dict { PACKAGE_PIN Y11 IOSTANDARD LVCMOS33 } [get_ports sigout1]
-#set_property -dict { PACKAGE_PIN Y10 IOSTANDARD LVCMOS33 } [get_ports sigout2]
+set_property -dict { PACKAGE_PIN Y11 IOSTANDARD LVCMOS33 } [get_ports sigout1]
+set_property -dict { PACKAGE_PIN Y10 IOSTANDARD LVCMOS33 } [get_ports sigout2]
 
 # ----------------------------------------------------------------------------
 # JB Pmod - Bank 13
@@ -116,9 +116,9 @@ set_property PACKAGE_PIN Y9 [get_ports {GCLK}];  # "GCLK"
 # ----------------------------------------------------------------------------
 # JC Pmod - Bank 13
 # ---------------------------------------------------------------------------- 
-#set_property PACKAGE_PIN AB6 [get_ports {JC1_N}];  # "JC1_N"  
+set_property -dict {PACKAGE_PIN AB6 IOSTANDARD LVCMOS33} [get_ports {JC1_N}];  # "JC1_N"  
 set_property -dict {PACKAGE_PIN AB7 IOSTANDARD LVCMOS33} [get_ports {JC1_P}];  # "JC1_P" #HERE
-#set_property PACKAGE_PIN AA4 [get_ports {JC2_N}];  # "JC2_N"
+set_property -dict {PACKAGE_PIN AA4 IOSTANDARD LVCMOS33} [get_ports {JC2_N}];  # "JC2_N"
 set_property -dict {PACKAGE_PIN Y4  IOSTANDARD LVCMOS33} [get_ports {JC2_P}];  # "JC2_P" #HERE
 
 #Input from the 2 signals:
@@ -351,8 +351,8 @@ set_property -dict {PACKAGE_PIN Y4  IOSTANDARD LVCMOS33} [get_ports {JC2_P}];  #
 #set_property PACKAGE_PIN C19 [get_ports {FMC_CLK1_N}];  # "FMC-CLK1_N"
 #set_property PACKAGE_PIN D18 [get_ports {FMC_CLK1_P}];  # "FMC-CLK1_P"
 #set_property PACKAGE_PIN B20 [get_ports {FMC_LA17_CC_N}];  # "FMC-LA17_CC_N"
-#set_property PACKAGE_PIN B19 [get_ports {FMC_LA17_CC_P}];  # "FMC-LA17_CC_P"
-#set_property PACKAGE_PIN C20 [get_ports {FMC_LA18_CC_N}];  # "FMC-LA18_CC_N"
+set_property -dict { PACKAGE_PIN B19 IOSTANDARD LVCMOS33} [get_ports {FMC_LA17_CC_P}];  # "FMC-LA17_CC_P"
+set_property -dict { PACKAGE_PIN C20 IOSTANDARD LVCMOS33} [get_ports {FMC_LA18_CC_N}];  # "FMC-LA18_CC_N"
 set_property -dict { PACKAGE_PIN D20 IOSTANDARD LVCMOS33} [get_ports {FMC_LA18_CC_P}];  # "FMC-LA18_CC_P"
 #set_property PACKAGE_PIN G16 [get_ports {FMC_LA19_N}];  # "FMC-LA19_N"
 #set_property PACKAGE_PIN G15 [get_ports {FMC_LA19_P}];  # "FMC-LA19_P"

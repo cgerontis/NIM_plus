@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
-| Date         : Tue Apr 23 12:31:37 2019
+| Date         : Thu Apr 25 22:21:27 2019
 | Host         : DESKTOP-AUBSM1F running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -file AND_GATE_timing_summary_routed.rpt -pb AND_GATE_timing_summary_routed.pb
 | Design       : AND_GATE
@@ -53,6 +53,8 @@ Table of Contents
 --------------------
  There are 33 register/latch pins with no clock driven by root clock pin: GCLK (HIGH)
 
+ There are 32 register/latch pins with no clock driven by root clock pin: clk_reg/C (HIGH)
+
 
 2. checking constant clock
 --------------------------
@@ -66,7 +68,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 64 pins that are not constrained for maximum delay. (HIGH)
+ There are 158 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -80,7 +82,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 2 ports with no output delay specified. (HIGH)
+ There are 6 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
