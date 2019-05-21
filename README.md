@@ -12,6 +12,6 @@ https://github.com/cgerontis/NIM_plus/tree/master/ANOTHER_AND_GATE/ANOTHER_AND_G
 DAC_Control.vhd(link below) was written by Alan G Prosser from Fermilab, and is used to set the DAC, however we still need to figure out how to use this code
 https://github.com/cgerontis/NIM_plus/tree/master/ANOTHER_AND_GATE/ANOTHER_AND_GATE.srcs/sources_1/imports/Desktop
 
-The code here (https://github.com/cgerontis/NIM_plus/tree/master/ANOTHER_AND_GATE/ANOTHER_AND_GATE.srcs/sources_1/new) is test code that attempts to accomplish the same thing as the DAC_Control code in a simpler way, however it is hardcoded
+The code here (https://github.com/cgerontis/NIM_plus/tree/master/FPGA_AND_GATE/FPGA_AND_GATE.srcs/sources_1/new/AND_GATE.vhd) is test code that attempts to accomplish the same thing as the DAC_Control code in a simpler way, however it is hardcoded
 
 Note: The repository still has to be cleaned up and names must be updated
